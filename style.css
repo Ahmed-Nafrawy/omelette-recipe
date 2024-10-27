@@ -1,0 +1,300 @@
+/* Fonts fro google */
+@import url("https://fonts.googleapis.com/css2?family=Coiny&family=Figtree:ital,wght@0,300..900;1,300..900&family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Coiny&family=Figtree:ital,wght@0,300..900;1,300..900&family=Outfit:wght@100..900&family=Young+Serif&display=swap");
+
+/* CSS Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* Changing the thr normal (16px) font to (10px) to make it more easier (Equalize the (px) with (rem)) */
+html {
+  font-size: 62.5%;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  scroll-behavior: smooth;
+}
+
+/* Variables  */
+:root {
+  /* Colors */
+  --bc-paige-stone-100: hsl(30, 54%, 90%);
+  --bc-white: hsl(0, 0%, 100%);
+  --bc-light-grey-stone-150: hsl(30, 18%, 87%);
+  --bc-dark-grey-Stone-600: hsl(30, 10%, 34%);
+  --bc-darker-grey-Stone-900: hsl(24, 5%, 18%);
+  --bc-Brown-800: hsl(14, 45%, 36%);
+  --bc-Rose-800: hsl(332, 51%, 32%);
+  --bc-light-Rose-50: hsl(330, 100%, 98%);
+
+  /* Font weight */
+  --fw-light: 400;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* Font Family */
+  --ff-heading: "Young serif", sans-serif;
+  --ff-paragraph: "Outfit", sans-serif;
+
+  /* Typography */
+  --fs-extra-small: 1.3rem;
+  --fs-small: 1.6rem;
+  --fs-medium: 1.8rem;
+  --fs-large: 3rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 16px; /* For smaller screens */
+  min-height: 100vh;
+  font-size: var(--fs-extra-small);
+  font-family: var(--ff-paragraph);
+  line-height: 1.6;
+
+  background-color: hsl(30, 54%, 90%);
+}
+/* The recipe container */
+.recipe-container {
+  width: 33rem;
+  height: auto;
+  background-color: var(--bc-white);
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Recipe image */
+.recipe-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.recipe-heading {
+  font-size: var(--fs-large);
+  font-weight: var(--fw-semibold);
+  line-height: 1;
+  padding: 3.5rem 3rem 2.5rem;
+  color: var(--bc-darker-grey-Stone-600);
+  font-family: var(--ff-heading);
+}
+
+.recipe-description {
+  font-size: var(--fs-extra-small);
+  color: var(--bc-dark-grey-Stone-600);
+  padding: 0 3rem 3.5rem;
+  font-family: var(--ff-paragraph);
+  line-height: 1.5;
+}
+
+/* Preparation Time */
+.preparation {
+  background-color: var(--bc-light-Rose-50);
+  margin: 0 3rem;
+}
+
+aside > h2 {
+  padding: 2rem 2rem 1rem;
+  font-size: var(--fs-medium);
+  color: var(--bc-Rose-800);
+}
+.preparation-time {
+  padding: 0 3rem 3rem 5rem;
+  font-size: 1.5rem;
+  color: var(--bc-dark-grey-Stone-600);
+  list-style: color var(--bc-Rose-800);
+}
+
+.preparation-time li:not(:nth-child(3)) {
+  margin-bottom: 1.5rem;
+}
+
+.preparation-time li {
+  padding-left: 1rem;
+}
+
+.preparation-time li::marker {
+  color: var(--bc-Rose-800);
+}
+
+/* Ingredient list */
+.list-heading {
+  padding: 3rem 0 2rem 3rem;
+  font-size: 2.5rem;
+  font-weight: var(--fw-light);
+  line-height: 1;
+  color: var(--bc-Brown-800);
+  font-family: var(--ff-heading);
+}
+
+.ingredients-list {
+  padding: 0 3rem 3rem 5rem;
+  font-size: var(--fs-small);
+  color: var(--bc-dark-grey-Stone-600);
+  line-height: 1.5;
+}
+
+.ingredients-list li {
+  padding-left: 1rem; /*Set space between the bullet points and the text*/
+  padding-bottom: 0.8rem;
+}
+
+.ingredients-list ul {
+  list-style: disc;
+}
+
+hr {
+  width: 80%;
+  border: none; /* Remove default border */
+  border-top: 1px solid var(--bc-paige-stone-100); /* Thin gray line */
+  margin: 0 auto; /* Add spacing above and below */
+}
+
+/* Instructions List */
+
+.steps-list {
+  padding: 0 3rem 3rem 5rem;
+  font-size: 1.5rem;
+  color: var(--bc-dark-grey-Stone-600);
+}
+
+.steps-list ol {
+  list-style: decimal;
+}
+
+.steps-list li:not(:nth-child(6)) {
+  margin-bottom: 1.5rem;
+}
+
+.steps-list li {
+  padding-left: 1rem;
+}
+.steps-list li::marker {
+  font-weight: var(--fw-bold);
+  color: var(--bc-Brown-800);
+}
+
+/* Nutrition Table */
+.nutrition {
+  margin-bottom: 1rem;
+}
+.table-description {
+  padding: 0 3rem 2rem 3rem;
+  font-size: 1.4rem;
+  color: var(--bc-dark-grey-Stone-600);
+  line-height: 1.5;
+}
+
+table {
+  display: block;
+  width: 80%; /*table width*/
+  padding-left: 3rem; /*Adding space between table and card while saving the length of the bottom border*/
+}
+
+td {
+  padding: 1rem 5rem 1rem 3rem; /* Space between rows and columns */
+  font-size: 1.4rem;
+  color: var(--bc-dark-grey-Stone-600);
+  text-align: left;
+  border-bottom: 1px solid var(--bc-paige-stone-100);
+}
+
+.last,
+.value-last {
+  border-bottom: none;
+}
+
+td.value {
+  font-weight: var(--fw-bold);
+  color: var(--bc-Brown-800);
+}
+
+/* The Footer (Optional) */
+.attribution {
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 0 auto 50px;
+  font-weight: 700;
+  padding: 2rem;
+}
+.attribution a {
+  color: var(--bc-Brown-800);
+}
+
+.attribution a:hover,
+.attribution a:active {
+  color: var(--bc-Rose-800);
+  transition: 0.3s;
+}
+
+@media (min-width: 37.5em) {
+  .recipe-container {
+    max-width: 55rem;
+    width: 50rem;
+    padding: 2rem;
+    border-radius: 16px;
+  }
+
+  .recipe-img {
+    border-radius: 8px;
+  }
+
+  .recipe-heading {
+    font-size: 2.4rem;
+    font-weight: var(--fw-bold);
+    padding: 3.5rem 3rem 2rem 1rem;
+  }
+
+  .recipe-description {
+    font-size: var(--fs-extra-small);
+    padding: 0 2.5rem 3.5rem 1rem;
+  }
+
+  /* Preparation Time */
+  .preparation {
+    margin: 0 1rem;
+  }
+
+  /* Ingredient list */
+  .list-heading {
+    padding: 3rem 0 2rem 1rem;
+  }
+
+  .ingredients-list {
+    padding: 0 1rem 3rem 4rem;
+  }
+
+  hr {
+    width: 90%;
+  }
+  /* Instructions List */
+  .steps-list {
+    padding: 0 2rem 3rem 4rem;
+  }
+
+  /* Nutrition Table */
+  .table-description {
+    padding: 0 2rem 2rem 1rem;
+  }
+
+  table {
+    display: block;
+    width: 90%; /*table width*/
+    padding-left: 3rem; /*Adding space between table and card while saving the length of the bottom border*/
+  }
+
+  td {
+    padding: 1rem 8rem 1rem 5rem; /* Space between rows and columns */
+  }
+
+  /* The Footer (Optional) */
+  .attribution {
+    font-size: 2rem;
+  }
+}
