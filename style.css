@@ -235,8 +235,8 @@ td.value {
 
 @media (min-width: 37.5em) {
   .recipe-container {
-    max-width: 55rem;
-    width: 50rem;
+    max-width: 65rem;
+    width: 60rem;
     padding: 2rem;
     border-radius: 16px;
   }
@@ -246,13 +246,13 @@ td.value {
   }
 
   .recipe-heading {
-    font-size: 2.4rem;
+    font-size: 3rem;
     font-weight: var(--fw-bold);
     padding: 3.5rem 3rem 2rem 1rem;
   }
 
   .recipe-description {
-    font-size: var(--fs-extra-small);
+    font-size: var(--fs-sm);
     padding: 0 2.5rem 3.5rem 1rem;
   }
 
